@@ -55,10 +55,10 @@ body {
     border-radius: 4px;
 }
 
-/* Hero Section */
+/* Hero Section - מעודכן לתמונה מהמחשב שלך */
 .hero {
-    background: linear-gradient(rgba(240, 248, 255, 0.92), rgba(240, 248, 255, 0.92)), 
-                url('https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+    background: linear-gradient(rgba(240, 248, 255, 0.88), rgba(240, 248, 255, 0.88)), 
+                url('network-bg.jpg') center/cover no-repeat;
     padding: 6rem 2rem;
     text-align: center;
     border-bottom: 2px solid var(--bg-light);
@@ -77,7 +77,7 @@ body {
     margin-bottom: 2rem;
 }
 
-/* כפתורי קישורים (Header & Footer) */
+/* כפתורי קישורים */
 .social-links {
     display: flex;
     justify-content: center;
@@ -120,11 +120,12 @@ body {
     text-align: center;
 }
 
-/* About & Research Layout */
+/* About & Research Layout - מרווח גדול יותר בין התמונה לטקסט */
 .content-grid {
     display: flex;
     align-items: center;
-    gap: 2.5rem;
+    justify-content: space-between;
+    gap: 5rem;
 }
 
 .profile-img {
@@ -145,6 +146,7 @@ body {
 /* Lists */
 .styled-list {
     list-style: none;
+    flex-grow: 1;
 }
 
 .styled-list li {
@@ -180,20 +182,6 @@ body {
 
 .doi-link:hover {
     text-decoration: underline;
-}
-
-/* Conferences (Collapsible) */
-details {
-    background: var(--bg-light);
-    padding: 1rem;
-    border-radius: 8px;
-    cursor: pointer;
-}
-
-summary {
-    font-weight: 600;
-    font-size: 1.2rem;
-    color: var(--primary-color);
 }
 
 /* Contact Form */
@@ -239,6 +227,7 @@ footer {
     .content-grid {
         flex-direction: column;
         text-align: center;
+        gap: 2.5rem;
     }
     .side-img { width: 100%; }
 }
