@@ -1,15 +1,23 @@
-# Naama's Professional Academic Website
+# Naama Nebenzahl-Elitzur - Academic Profile Website
 
-This website is designed for PhD candidate and researcher Naama Nebenzahl-Elitzur. It features a bilingual structure (English and Hebrew) with a professional academic design.
+This is a static, bilingual (English/Hebrew) academic portfolio website built specifically for GitHub Pages. 
+It uses HTML5, CSS3 (Flexbox), and the Formspree API for the contact form. No JavaScript is required.
 
 ## Files included:
-- `index.html`: The English homepage.
-- `he.html`: The Hebrew homepage (Right-to-Left).
-- `style.css`: The shared design and layout.
-- `README.md`: This instruction file.
+1. `index.html` - The English version of the website (LTR).
+2. `he.html` - The Hebrew version of the website (RTL).
+3. `style.css` - The shared stylesheet that handles layout, responsiveness, and typography.
+4. `README.md` - This documentation file.
 
-## Instructions:
-1. **The Photo:** You must have a photo named exactly **`profile.jpg`** in the same folder. 
-   - If your photo is named `profile.JPEG`, please **rename** it to `profile.jpg` (all lowercase) before uploading.
-2. **Formspree:** The "Contact" button is connected to your email via Formspree. Ensure your Formspree ID is updated in the HTML `action` if you change providers.
-3. **Upload to GitHub:** Upload all these files (including your renamed `profile.jpg`) to your GitHub repository to go live.
+## How to Deploy on GitHub Pages:
+1. Create a new repository on GitHub.
+2. Upload these 4 files directly into the root folder of the repository.
+3. Upload your profile picture and name it EXACTLY `profile.jpg` in the same folder.
+4. Go to the repository **Settings** > **Pages**.
+5. Under **Build and deployment**, set the source to `Deploy from a branch`.
+6. Select the `main` (or `master`) branch and click **Save**.
+7. Wait a few minutes, and your site will be live!
+
+## Notes:
+- The background image in the hero section is pulled securely from Unsplash (a royalty-free image platform).
+- The contact form is fully functional using Formspree. Emails will be sent directly to the address associated with `meenwprb`.
