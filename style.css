@@ -1,67 +1,231 @@
+/* הגדרות בסיס ומשתנים - צבעים בהשראת האתר שביקשת */
 :root {
-    --primary: #1a2a3a;
-    --accent: #4a90e2;
-    --bg-light: #f8fafc;
+    --primary-color: #2c3e50;
+    --secondary-color: #34495e;
+    --accent-color: #3498db;
+    --bg-light: #f8f9fa;
+    --text-color: #333333;
     --white: #ffffff;
-    --text: #1e293b;
-    --border: #e2e8f0;
 }
 
-body { font-family: 'Assistant', sans-serif; margin: 0; color: var(--text); background: var(--white); line-height: 1.7; }
-.container { max-width: 1000px; margin: 0 auto; padding: 0 25px; }
-
-/* Header & Nav */
-header { background: var(--primary); color: white; padding: 1rem 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-nav { display: flex; justify-content: space-between; align-items: center; }
-nav ul { list-style: none; display: flex; gap: 1.5rem; margin: 0; padding: 0; align-items: center; }
-nav a { color: white; text-decoration: none; font-size: 0.9rem; font-weight: 700; }
-.nav-contact-btn { background: var(--accent); padding: 6px 16px; border-radius: 20px; transition: 0.3s; }
-.nav-contact-btn:hover { background: #357abd; }
-
-/* Hero Section - Connecting Dots Background */
-.hero { 
-    position: relative; 
-    padding: 80px 0; 
-    color: white;
-    background-color: var(--primary);
-    background-image: linear-gradient(rgba(26, 42, 58, 0.85), rgba(26, 42, 58, 0.85)), url('https://images.unsplash.com/photo-1558494949-ef010cbdcc51?auto=format&fit=crop&w=1200&q=80');
-    background-size: cover;
-    background-position: center;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.hero-flex { display: flex; align-items: center; gap: 50px; position: relative; z-index: 2; }
-.hero-img { width: 220px; height: 220px; border-radius: 50%; object-fit: cover; border: 5px solid white; box-shadow: 0 10px 25px rgba(0,0,0,0.2); }
-.hero-text h1 { font-size: 2.8rem; margin: 0; text-transform: none; } /* No all caps */
-.subtitle { font-size: 1.3rem; color: var(--accent); font-weight: bold; margin-top: 5px; }
-
-/* Sections */
-section { padding: 60px 0; border-bottom: 1px solid var(--border); }
-h2 { color: var(--primary); border-right: 6px solid var(--accent); padding-right: 15px; margin-bottom: 30px; }
-[dir="ltr"] h2 { border-right: none; border-left: 6px solid var(--accent); padding-left: 15px; }
-
-/* Buttons & Links */
-.btn-group { margin-top: 20px; display: flex; gap: 10px; flex-wrap: wrap; }
-.btn-social { 
-    display: inline-block; 
-    padding: 8px 18px; 
-    border-radius: 25px; 
-    text-decoration: none; 
-    font-weight: bold; 
-    font-size: 0.85rem; 
-    transition: 0.3s;
-    background: rgba(255, 255, 255, 0.15);
-    color: white;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+body {
+    font-family: 'Assistant', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--white);
 }
-.btn-social:hover { background: var(--accent); border-color: var(--accent); }
 
-/* Grid Layout */
-.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-.card { background: var(--bg-light); border-radius: 12px; padding: 25px; border: 1px solid var(--border); }
+/* ניווט (תפריט עליון) */
+.navbar {
+    background-color: var(--primary-color);
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
 
-/* Contact Form */
-.contact-form { max-width: 600px; margin: 30px 0; display: flex; flex-direction: column; gap: 15px; }
-input, textarea { padding: 12px; border: 1px solid #ddd; border-radius: 6px; font-family: inherit; font-size: 1rem; }
-.submit-btn { background: var(--primary); color: white; border: none; padding: 15px; border-radius: 6px; cursor: pointer; font-weight: bold; }
+.nav-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
 
-@media (max-width: 768px) { .hero-flex { flex-direction: column; text-align: center; } .btn-group { justify-content: center; } }
+.nav-links a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
+}
+
+.nav-links .lang-btn {
+    border: 1px solid var(--white);
+    padding: 2px 10px;
+    border-radius: 4px;
+}
+
+/* אזור ההירו (רקע רשת חצי שקוף) */
+.hero {
+    /* שימוש בתמונת Network חינמית מ-Unsplash עם שכבה שקופה לבנה לקריאות */
+    background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), 
+                url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+    padding: 6rem 2rem;
+    text-align: center;
+    border-bottom: 2px solid var(--bg-light);
+}
+
+.hero h1 {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.hero h2 {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+/* כפתורים */
+.social-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 0.6rem 1.2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--accent-color);
+}
+
+/* מיכל מרכזי ואזורים */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.section {
+    padding: 3rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.section.bg-light {
+    background-color: var(--bg-light);
+    padding: 3rem 2rem;
+    border-radius: 8px;
+    margin: 2rem 0;
+}
+
+.section-title {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* אזור 'אודות' (משתמש ב-Flexbox ליישור תמונה אוטומטי בהתאם לשפה) */
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.profile-img {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    flex-shrink: 0;
+}
+
+.about-text {
+    font-size: 1.1rem;
+}
+
+/* רשימות ותוכן */
+.styled-list {
+    list-style-position: inside;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.styled-list li {
+    margin-bottom: 0.8rem;
+}
+
+.content-block h3 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--secondary-color);
+}
+
+/* טופס צור קשר */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Assistant', sans-serif;
+    font-size: 1rem;
+}
+
+.submit-btn {
+    background-color: var(--accent-color);
+    color: var(--white);
+    border: none;
+    padding: 1rem;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-family: 'Assistant', sans-serif;
+    font-weight: 600;
+}
+
+.submit-btn:hover {
+    background-color: var(--primary-color);
+}
+
+/* פוטר */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    margin-top: 2rem;
+}
+
+/* רספונסיביות למובייל */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    .nav-links {
+        gap: 1rem;
+    }
+}
