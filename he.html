@@ -3,63 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>נעמה נבנצאל-אליצור | אתר אקדמי</title>
+    <title>נעמה נבנצאל אליצור | פרופיל אקדמי</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header><nav class="container">
-        <div class="logo">נעמה נבנצאל-אליצור</div>
-        <ul>
-            <li><a href="#about">אודות</a></li>
-            <li><a href="#research">מחקר</a></li>
-            <li><a href="#contact" class="nav-contact-btn">צרו קשר</a></li>
-            <li><a href="index.html" style="background:rgba(255,255,255,0.1); padding:5px 12px; border-radius:20px;">English</a></li>
-        </ul>
-    </nav></header>
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="#about">אודותיי</a>
+            <a href="#research">תחומי מחקר</a>
+            <a href="#publications">פרסומים</a>
+            <a href="#teaching">הוראה</a>
+            <a href="#conferences">כנסים</a>
+            <a href="#contact" class="contact-btn">צור קשר</a>
+            <a href="index.html" class="lang-btn">English</a>
+        </div>
+    </nav>
 
-    <section class="hero"><div class="container hero-flex">
-        <img src="profile.jpg" alt="נעמה נבנצאל-אליצור" class="hero-img">
-        <div class="hero-text">
-            <h1>נעמה נבנצאל-אליצור</h1>
-            <p class="subtitle">דוקטורנטית ומלגאית נשיא | אוניברסיטת בר-אילן</p>
-            <p>עובדת סוציאלית, חוקרת ומרצה המתמחה בגישה הקהילתית ובטכנולוגיה בזקנה.</p>
-            <div class="btn-group">
-                <a href="https://scholar.google.co.il/citations?user=_rtaobgAAAAJ" class="btn-social" target="_blank">Google Scholar</a>
-                <a href="https://www.linkedin.com/in/naama-nebenzahl-elitzur/" class="btn-social" target="_blank">LinkedIn</a>
-                <a href="https://www.researchgate.net/profile/Naama-Nebenzahl-Elitzur" class="btn-social" target="_blank">ResearchGate</a>
-                <a href="https://orcid.org/0009-0003-6755-7970" class="btn-social" target="_blank">ORCID</a>
+    <header class="hero">
+        <div class="hero-content">
+            <h1>נעמה נבנצאל אליצור</h1>
+            <h2>דוקטורנטית לעבודה סוציאלית | עובדת סוציאלית קהילתית</h2>
+            <p>אוניברסיטת בר-אילן</p>
+            <div class="social-links">
+                <a href="https://scholar.google.co.il/citations?user=_rtaobgAAAAJ&hl=iw" target="_blank" class="btn">Google Scholar</a>
+                <a href="https://www.linkedin.com/in/naama-nebenzahl-elitzur/" target="_blank" class="btn">LinkedIn</a>
+                <a href="https://www.researchgate.net/profile/Naama-Nebenzahl-Elitzur" target="_blank" class="btn">ResearchGate</a>
+                <a href="https://orcid.org/0009-0003-6755-7970" target="_blank" class="btn">ORCID</a>
             </div>
         </div>
-    </div></section>
+    </header>
 
     <main class="container">
-        <section id="about">
-            <h2>תחומי עניין במחקר</h2>
-            <div class="grid">
-                <div class="card"><h3>עבודה סוציאלית קהילתית</h3><p>חיבור בין רמת המיקרו למאקרו וקהילות תמיכה מקוונות בזמני משבר.</p></div>
-                <div class="card"><h3>טכנולוגיה ובינה מלאכותית</h3><p>שילוב Gerontechnology וכלי AI בשירותי רווחה וזיקנה.</p></div>
+        <section id="about" class="section">
+            <h2 class="section-title">אודותיי</h2>
+            <div class="about-content">
+                <img src="profile.jpg" alt="נעמה נבנצאל אליצור" class="profile-img">
+                <div class="about-text">
+                    <p>אני דוקטורנטית לעבודה סוציאלית באוניברסיטת בר-אילן וחוקרת. עבודת הדוקטורט שלי מתמקדת ב"שבירת החומה? גישור בין מיקרו למאקרו בעבודה סוציאלית" – בחינת תפיסות ופרקטיקות של הגישה הקהילתית בתוכנית למטפלים באזרחים ותיקים. אני בעלת תואר שני (בהצטיינות יתרה) מאוניברסיטת אריאל, ותואר ראשון מאוניברסיטת בן-גוריון ואוניברסיטת אריאל. יש לי ניסיון מקצועי רב כעובדת סוציאלית קהילתית, בניהול תוכניות לאזרחים ותיקים ובהובלת יוזמות קהילתיות.</p>
+                </div>
             </div>
         </section>
 
-        <section id="publications">
-            <h2>פרסומים נבחרים</h2>
-            <p><strong>International Psychogeriatrics (2026):</strong> שימוש במדיה ורווחה נפשית בקרב בני הגיל השלישי.</p>
-            <p><strong>Social Work (2024):</strong> גורמים המשפיעים על כוונת עו"סים בישראל להישאר במקצוע.</p>
+        <section id="research" class="section">
+            <h2 class="section-title">תחומי מחקר</h2>
+            <ul class="styled-list">
+                <li>עבודה סוציאלית קהילתית</li>
+                <li>חיבור בין מיקרו למאקרו</li>
+                <li>קהילות מקוונות בזמן משבר</li>
+                <li>בינה מלאכותית (AI) בעבודה סוציאלית</li>
+                <li>גרונטכנולוגיה (Gerontechnology)</li>
+                <li>ניתוח רשתות חברתיות (SNA)</li>
+            </ul>
         </section>
 
-        <section id="contact">
-            <h2>צרו קשר ושיתופי פעולה</h2>
-            <p>אני זמינה לשיתופי פעולה מחקריים ולהרצאות אורח עבור ארגונים וסטודנטים בנושאים:</p>
-            <p style="font-weight:700;">בינה מלאכותית פרקטית לעו"סים | בניית קהילה דיגיטלית | טכנולוגיה וזיקנה</p>
-            <p>ניתן ליצור קשר בטופס למטה:</p>
+        <section id="publications" class="section">
+            <h2 class="section-title">פרסומים</h2>
+            <div class="content-block">
+                <h3>מאמרים בכתבי עת שפיטים</h3>
+                <ul class="styled-list" dir="ltr" style="text-align: left;">
+                    <li><strong>Nebenzahl-Elitzur, N.</strong>, Kagan, M., Zychlinski, E. (2026). Media use and well-being in older adults: The mediating role of social inclusion and subjective accelerated aging. <em>International Psychogeriatrics</em>.</li>
+                    <li><strong>Nebenzahl-Elitzur, N.</strong>, Kagan, M., & Zychlinski, E. (2024). Factors Associated with Israeli Social Workers' Intention to Stay in the Profession. <em>Social Work</em>, 69(2), 125-132.</li>
+                </ul>
+                
+                <h3>פרקים בספרים</h3>
+                <ul class="styled-list" dir="ltr" style="text-align: left;">
+                    <li><strong>Nebenzahl-Elitzur, N.</strong> (2027). Research Through the Lens of Field Workers: The Structural Gap Between Academia and Practice, and a Proposal for Reconnection. In K. Hermsen & M. Manzel (Eds.), <em>Practice-experienced Researchers in Social Work</em>. Barbara Budrich Publishers.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="conferences" class="section bg-light">
+            <h2 class="section-title">כנסים נבחרים</h2>
+            <ul class="styled-list">
+                <li><strong>2026:</strong> הכנס השנתי ה-30 של SSWR, וושינגטון הבירה, ארה"ב.</li>
+                <li><strong>2025:</strong> כנס TiSSA, פורטו, פורטוגל.</li>
+                <li><strong>2025:</strong> הכנס ה-14 של ESPAnet ישראל, המכללה האקדמית תל אביב-יפו.</li>
+                <li><strong>2024:</strong> כנס איגוד העובדים הסוציאליים, ירושלים.</li>
+            </ul>
+        </section>
+
+        <section id="teaching" class="section">
+            <h2 class="section-title">הוראה</h2>
+            <ul class="styled-list">
+                <li><strong>עבודה סוציאלית קהילתית</strong> (תואר ראשון) – אוניברסיטת אריאל</li>
+                <li><strong>סדנה בעבודה סוציאלית</strong> (תואר ראשון) – אוניברסיטת אריאל</li>
+                <li><strong>התערבות קהילתית בעבודה עם הפרט</strong> (תואר ראשון) – אוניברסיטת בר-אילן</li>
+            </ul>
+        </section>
+
+        <section id="contact" class="section">
+            <h2 class="section-title">צור קשר</h2>
             <form action="https://formspree.io/f/meenwprb" method="POST" class="contact-form">
                 <input type="text" name="name" placeholder="שם מלא" required>
-                <input type="email" name="email" placeholder="דוא״ל לחזרה" required>
-                <textarea name="message" rows="5" placeholder="ההודעה שלך" required></textarea>
-                <button type="submit" class="submit-btn">שלח פנייה</button>
+                <input type="email" name="email" placeholder="דוא״ל" required>
+                <textarea name="message" placeholder="ההודעה שלך" rows="5" required></textarea>
+                <button type="submit" class="submit-btn">שליחה</button>
             </form>
         </section>
     </main>
+
+    <footer>
+        <p>&copy; 2026 נעמה נבנצאל אליצור. כל הזכויות שמורות.</p>
+    </footer>
 </body>
 </html>
