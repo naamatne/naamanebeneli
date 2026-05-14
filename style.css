@@ -21,7 +21,7 @@ body {
     background-color: var(--white);
 }
 
-/* ניווט (תפריט עליון) */
+/* ניווט */
 .navbar {
     background-color: var(--primary-color);
     padding: 1rem 2rem;
@@ -55,7 +55,7 @@ body {
     border-radius: 4px;
 }
 
-/* אזור ההירו (רקע רשת איכותי שנמשך ישירות מהאינטרנט) */
+/* Hero Section */
 .hero {
     background: linear-gradient(rgba(240, 248, 255, 0.92), rgba(240, 248, 255, 0.92)), 
                 url('https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
@@ -74,15 +74,10 @@ body {
     font-size: 1.5rem;
     color: var(--secondary-color);
     font-weight: 400;
-    margin-bottom: 1rem;
-}
-
-.hero p {
-    font-size: 1.2rem;
     margin-bottom: 2rem;
 }
 
-/* כפתורים */
+/* כפתורי קישורים (Header & Footer) */
 .social-links {
     display: flex;
     justify-content: center;
@@ -98,6 +93,7 @@ body {
     border-radius: 5px;
     text-decoration: none;
     font-weight: 600;
+    font-size: 0.9rem;
     transition: background-color 0.3s;
 }
 
@@ -105,7 +101,7 @@ body {
     background-color: var(--accent-color);
 }
 
-/* מיכל מרכזי ואזורים */
+/* Container */
 .container {
     max-width: 1000px;
     margin: 0 auto;
@@ -117,58 +113,90 @@ body {
     border-bottom: 1px solid #eee;
 }
 
-.section.bg-light {
-    background-color: var(--bg-light);
-    padding: 3rem 2rem;
-    border-radius: 8px;
-    margin: 2rem 0;
-}
-
 .section-title {
     color: var(--primary-color);
     font-size: 2rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
     text-align: center;
 }
 
-/* אזור 'אודות' (משתמש ב-Flexbox ליישור תמונה אוטומטי בהתאם לשפה) */
-.about-content {
+/* About & Research Layout */
+.content-grid {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 2.5rem;
 }
 
 .profile-img {
-    width: 220px;
-    height: 220px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     object-fit: cover;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     flex-shrink: 0;
 }
 
-.about-text {
-    font-size: 1.1rem;
+.side-img {
+    width: 300px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-/* רשימות ותוכן */
+/* Lists */
 .styled-list {
-    list-style-position: inside;
-    font-size: 1.1rem;
-    line-height: 1.8;
+    list-style: none;
 }
 
 .styled-list li {
-    margin-bottom: 0.8rem;
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    position: relative;
 }
 
-.content-block h3 {
-    margin-top: 1.5rem;
-    margin-bottom: 0.5rem;
-    color: var(--secondary-color);
+.styled-list li::before {
+    content: "•";
+    color: var(--accent-color);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
 }
 
-/* טופס צור קשר */
+[dir="rtl"] .styled-list li {
+    padding-left: 0;
+    padding-right: 1.5rem;
+}
+
+[dir="rtl"] .styled-list li::before {
+    left: auto;
+    right: 0;
+}
+
+/* DOI Links */
+.doi-link {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.doi-link:hover {
+    text-decoration: underline;
+}
+
+/* Conferences (Collapsible) */
+details {
+    background: var(--bg-light);
+    padding: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+summary {
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+}
+
+/* Contact Form */
 .contact-form {
     max-width: 600px;
     margin: 0 auto;
@@ -177,14 +205,11 @@ body {
     gap: 1rem;
 }
 
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
+.contact-form input, .contact-form textarea {
     padding: 1rem;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-family: 'Assistant', sans-serif;
-    font-size: 1rem;
+    font-family: inherit;
 }
 
 .submit-btn {
@@ -193,38 +218,27 @@ body {
     border: none;
     padding: 1rem;
     border-radius: 5px;
-    font-size: 1.1rem;
     cursor: pointer;
-    transition: background 0.3s;
-    font-family: 'Assistant', sans-serif;
-    font-weight: 600;
+    font-weight: 700;
 }
 
-.submit-btn:hover {
-    background-color: var(--primary-color);
-}
-
-/* פוטר */
+/* Footer */
 footer {
-    text-align: center;
-    padding: 2rem;
     background-color: var(--primary-color);
     color: var(--white);
-    margin-top: 2rem;
+    padding: 3rem 2rem;
+    text-align: center;
 }
 
-/* רספונסיביות למובייל */
+.footer-social {
+    margin-bottom: 1.5rem;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
-    .about-content {
+    .content-grid {
         flex-direction: column;
         text-align: center;
     }
-    
-    .hero h1 {
-        font-size: 2.2rem;
-    }
-    
-    .nav-links {
-        gap: 1rem;
-    }
+    .side-img { width: 100%; }
 }
