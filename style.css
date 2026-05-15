@@ -52,12 +52,11 @@ body {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), 
+    background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), 
                 url('hero-network.png') center/cover no-repeat;
     padding: 6rem 2rem;
     text-align: center;
-    border-bottom: 2px solid #e0e6ed;
-    background-color: #ffffff;
+    border-bottom: 8px solid var(--primary-color);
 }
 
 .hero h1 { font-size: 3rem; color: var(--primary-color); margin-bottom: 0.5rem; }
@@ -89,11 +88,11 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 5rem; /* המרחק בין הטקסט לתמונה */
+    gap: 5rem;
 }
 
 .text-content {
-    flex: 1; /* הטקסט תופס את שאר המקום */
+    flex: 1;
 }
 
 .profile-img {
@@ -103,12 +102,12 @@ body {
     object-fit: cover;
     flex-shrink: 0;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    border: 5px solid var(--primary-color); /* המסגרת הכהה שביקשת */
+    border: 5px solid var(--primary-color);
 }
 
 .side-img {
     width: 350px;
-    height: 250px; /* מבטיח שהתמונה תהיה מלבנית תמיד */
+    height: 250px;
     object-fit: cover;
     border-radius: 8px;
     flex-shrink: 0;
@@ -117,7 +116,7 @@ body {
 
 /* רשימות ואזורים */
 .section { padding: 4rem 0; border-bottom: 1px solid #e0e6ed; }
-.section-title { color: var(--primary-color); font-size: 2.2rem; margin-bottom: 3rem; text-align: center; } /* מרווח מוגדל מתחת לכותרת */
+.section-title { color: var(--primary-color); font-size: 2.2rem; margin-bottom: 3rem; text-align: center; }
 
 .styled-list { list-style: none; }
 .styled-list li { margin-bottom: 1rem; padding-left: 1.5rem; position: relative; }
